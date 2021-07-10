@@ -154,7 +154,11 @@ body {
 	}
 	.freelancing-works {
 		padding: 3em 0;
+		flex-wrap: wrap;
 		.card{
+			@media(max-width: 600px) {
+				flex-direction: column;
+			}
 			gap: 20px;
 			&:not(:first-child) {
 				margin-top: 5em;
@@ -163,19 +167,20 @@ body {
 				flex-direction: row-reverse;
 			}
 			.left {
-				flex-basis: 50%;
+				flex: 1;
 				img {
 					border-radius: 20px;
 					transition: all 0.2s ease-out;
 					bottom: 0;
 					position: relative;
+					width: 100%;
 				&:hover {
 						bottom: 4px;
 					}
 				}
 			}
 			.right {
-				flex-basis: 60%;
+				flex: 1;
 				justify-content: space-between;
 				.links {
 					justify-content: flex-end;

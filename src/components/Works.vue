@@ -7,7 +7,7 @@
       <div class="freelancing-works flex flex-column">
         <div class="card flex">
           <div class="left flex">
-            <g-image src="~/assets/images/ahmedShaswar.png" width="500" />
+            <g-image src="~/assets/images/ahmedShaswar.png" />
           </div>
           <div class="right flex flex-column">
             <p class="description flex">
@@ -48,7 +48,7 @@
         </div>
         <div class="card flex">
           <div class="left flex">
-            <g-image src="~/assets/images/ahmedShaswar.png" width="500" />
+            <g-image src="~/assets/images/ahmedShaswar.png" />
           </div>
           <div class="right flex flex-column">
             <p class="description flex">
