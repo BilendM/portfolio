@@ -1,6 +1,6 @@
 <template>
   <section class="info-section about-me">
-    <div class="container flex">
+    <div class="container">
       <div class="left flex">
         <h1>About me</h1>
       </div>

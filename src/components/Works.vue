@@ -88,12 +88,17 @@
           </div>
         </div>
       </div>
+      <Projects />
     </div>
   </section>
 </template>
 
 <script>
+import Projects from "./Projects.vue";
 export default {
   name: "works",
+  components: {
+    Projects,
+  },
 };
 </script>
