@@ -6,22 +6,6 @@
       </div>
       <div class="contact flex">
         <div class="left flex flex-column">
-          <div class="flex socials">
-            <g-link to="https://github.com/BilendM">
-              <g-image
-                width="30"
-                src="~/assets/images/github_outline.svg"
-                fit="contain"
-              />
-            </g-link>
-            <g-link to="https://www.linkedin.com/in/bilendmohammed/">
-              <g-image
-                width="30"
-                src="~/assets/images/linkedin.svg"
-                fit="contain"
-              />
-            </g-link>
-          </div>
           <div class="contact-information flex flex-column">
             <h3>
               <g-image
@@ -46,6 +30,22 @@
               />Sulaymaniyah, Iraq
             </h3>
           </div>
+          <div class="flex socials">
+            <g-link to="https://www.linkedin.com/in/bilendmohammed/">
+              <g-image
+                width="30"
+                src="~/assets/images/linkedin.svg"
+                fit="contain"
+              />
+            </g-link>
+            <g-link to="https://github.com/BilendM">
+              <g-image
+                width="30"
+                src="~/assets/images/github_outline.svg"
+                fit="contain"
+              />
+            </g-link>
+          </div>
         </div>
         <div class="right flex flex-column contact-form">
           <form
@@ -63,6 +63,7 @@
               </p>
               <label for="name">Your Name</label>
               <input
+                required
                 v-model="formData.name"
                 id="name"
                 type="text"
@@ -72,6 +73,7 @@
             <div class="flex flex-column email">
               <label for="email">Your Email</label>
               <input
+                required
                 v-model="formData.email"
                 id="email"
                 type="email"
@@ -81,6 +83,7 @@
             <div class="flex flex-column message">
               <label for="message">Message</label>
               <textarea
+                required
                 v-model="formData.message"
                 rows="6"
                 id="message"
@@ -88,9 +91,12 @@
               ></textarea>
             </div>
             <div class="flex submit">
-              <button type="submit">Send Message</button>
+              <button type="submit">{{ sendMessage }}</button>
             </div>
           </form>
+          <p v-show="showMessage" class="flex message-received">
+            Your message has been received!
+          </p>
         </div>
       </div>
     </div>
@@ -103,6 +109,8 @@ export default {
   data() {
     return {
       formData: {},
+      showMessage: false,
+      sendMessage: "Send Message",
     };
   },
   methods: {
@@ -114,16 +122,17 @@ export default {
         .join("&");
     },
     submitForm(e) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
-          "form-name": e.target.getAttribute("name"),
-          ...this.formData,
-        }),
-      })
-        .then(() => this.$router.push("/success"))
-        .catch((error) => alert(error));
+      this.sendMessage = "Message Sent!";
+      // fetch("/", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //   body: this.encode({
+      //     "form-name": e.target.getAttribute("name"),
+      //     ...this.formData,
+      //   }),
+      // })
+      //   .then(() => this.$router.push("/success"))
+      //   .catch((error) => alert(error));
     },
   },
 };

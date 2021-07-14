@@ -268,14 +268,6 @@ body {
 				margin-bottom: 2rem;
 				font-weight: 300;
 			}
-			.socials {
-				margin-bottom: 3rem;
-				justify-content: space-between;
-				a {
-					margin-right: 2em;
-					display: flex;
-				}
-			}
 			.contact-information {
 				h3 img {
 					margin-right: 20px;
@@ -304,15 +296,62 @@ body {
 			button {
 				font-size: 1rem;
 				padding: 0.8em 1.4em;
+				margin-top: 1rem;
 				color: $text;
 				background-color: $lilac;
 				border: none;
 				border-radius: 10px;
+				cursor: pointer;
+				transition: all 0.2s ease-out;
 				&:focus {
 					outline: none;
 				}
+				&:hover {
+					background-color: $text-active;
+				}
+
+			}
+			.message-received {
+				margin-top: 20px;
+				text-align: center;
+				width: 100%;
+				justify-content: center;
+				border: 1px solid $lilac;
+				border-radius: 8px;
+				padding: 10px 20px;
+				transition: all 0.2s ease-in;
 			}
 		}
+		.socials {
+				margin-top: 1rem;
+				margin-left: 0.5rem;
+				justify-content: space-between;
+				a {
+					margin-right: 2.4em;
+					display: flex;
+					position: relative;
+					z-index: 99;
+					&::before {
+						content: '';
+						position: absolute;
+						background-color: $lilac;
+						top: -30%;
+						left: -30%;
+						transform: translate(-50%, -50%);
+						width: 40px;
+						border-radius: 50%;
+						height: 40px;
+						z-index: -1;
+						transform: scale(0);
+						transition: all 0.1s ease-out;
+					}
+					&:hover {
+						&::before {
+							transform: scale(1);
+						}
+					}
+				}
+			}
 	}
 }
 
