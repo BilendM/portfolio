@@ -11,12 +11,14 @@
     </div>
     <Aboutme id="about" />
     <Works id="works" />
+    <Contact id="contact" />
   </Layout>
 </template>
 
 <script>
 import Aboutme from "~/components/Aboutme.vue";
 import Works from "~/components/Works.vue";
+import Contact from "~/components/Contact.vue";
 export default {
   metaInfo: {
     title: "Home",
@@ -24,6 +26,7 @@ export default {
   components: {
     Aboutme,
     Works,
+    Contact,
   },
 };
 </script>

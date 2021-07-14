@@ -1,5 +1,5 @@
 <template>
-  <section class="info-section works">
+  <section class="section works">
     <div class="container">
       <div class="flex">
         <h1>Works</h1>

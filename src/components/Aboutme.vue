@@ -1,5 +1,5 @@
 <template>
-  <section class="info-section about-me">
+  <section class="section about-me">
     <div class="container">
       <div class="left flex">
         <h1>About me</h1>

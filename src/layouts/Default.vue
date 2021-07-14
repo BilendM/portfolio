@@ -11,6 +11,12 @@
         <li>
           <a href="#works">Works</a>
         </li>
+        <li>
+          <a href="#contact">Contact Me</a>
+        </li>
+        <li>
+          <a class="resume" href="contact">Resume</a>
+        </li>
       </ul>
     </nav>
     <slot />
