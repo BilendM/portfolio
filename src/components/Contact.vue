@@ -94,9 +94,6 @@
               <button type="submit">{{ sendMessage }}</button>
             </div>
           </form>
-          <p v-show="showMessage" class="flex message-received">
-            Your message has been received!
-          </p>
         </div>
       </div>
     </div>
@@ -109,7 +106,6 @@ export default {
   data() {
     return {
       formData: {},
-      showMessage: false,
       sendMessage: "Send Message",
     };
   },
@@ -122,17 +118,20 @@ export default {
         .join("&");
     },
     submitForm(e) {
-      this.sendMessage = "Message Sent!";
-      // fetch("/", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      //   body: this.encode({
-      //     "form-name": e.target.getAttribute("name"),
-      //     ...this.formData,
-      //   }),
-      // })
-      //   .then(() => this.$router.push("/success"))
-      //   .catch((error) => alert(error));
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData,
+        }),
+      })
+        .then(() => {
+          this.sendMessage = "Message Sent!";
+        })
+        .catch((error) => {
+          this.sendMessage = "Not Sent :(";
+        });
     },
   },
 };
