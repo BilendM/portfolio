@@ -50,26 +50,45 @@
         <div class="right flex flex-column contact-form">
           <form
             name="contact"
+            method="POST"
             @submit.prevent="submitForm"
             id="contact-form"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="contact" value="ask-question" />
+            <input type="hidden" name="form-name" value="contact" />
             <div class="flex flex-column name">
+              <p hidden>
+                <label> Don’t fill this out: <input name="bot-field" /> </label>
+              </p>
               <label for="name">Your Name</label>
-              <input id="name" type="text" name="name" />
+              <input
+                v-model="formData.name"
+                id="name"
+                type="text"
+                name="name"
+              />
             </div>
             <div class="flex flex-column email">
               <label for="email">Your Email</label>
-              <input id="email" type="email" name="email" />
+              <input
+                v-model="formData.email"
+                id="email"
+                type="email"
+                name="email"
+              />
             </div>
             <div class="flex flex-column message">
               <label for="message">Message</label>
-              <textarea rows="6" id="message" name="message"></textarea>
+              <textarea
+                v-model="formData.message"
+                rows="6"
+                id="message"
+                name="message"
+              ></textarea>
             </div>
             <div class="flex submit">
-              <button type="submit">Send</button>
+              <button type="submit">Send Message</button>
             </div>
           </form>
         </div>
@@ -82,18 +101,28 @@
 export default {
   name: "contact",
   data() {
-    return {};
+    return {
+      formData: {},
+    };
   },
   methods: {
-    submitForm() {
-      let myForm = document.getElementById("contact-form");
-      let formData = new FormData(myForm);
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+    },
+    submitForm(e) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: this.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData,
+        }),
       })
-        .then(() => console.log("Form successfully submitted"))
+        .then(() => this.$router.push("/success"))
         .catch((error) => alert(error));
     },
   },
