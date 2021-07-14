@@ -48,7 +48,12 @@
           </div>
         </div>
         <div class="right flex flex-column contact-form">
-          <form name="contact" method="POST" data-netlify="true">
+          <form
+            name="contact"
+            @submit.prevent="submitForm"
+            id="contact-form"
+            data-netlify="true"
+          >
             <div class="flex flex-column name">
               <label for="name">Your Name</label>
               <input id="name" type="text" name="name" />
@@ -74,5 +79,21 @@
 <script>
 export default {
   name: "contact",
+  data() {
+    return {};
+  },
+  methods: {
+    submitForm() {
+      let myForm = document.getElementById("contact-form");
+      let formData = new FormData(myForm);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => console.log("Form successfully submitted"))
+        .catch((error) => alert(error));
+    },
+  },
 };
 </script>

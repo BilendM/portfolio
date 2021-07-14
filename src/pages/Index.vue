@@ -5,7 +5,7 @@
       <div class="container">
         <div class="hero-text">
           <p>Hello, I'm</p>
-          <h1>Bilend Mohammed</h1>
+          <h1 data-aos="fade-down">Bilend Mohammed</h1>
         </div>
       </div>
     </div>

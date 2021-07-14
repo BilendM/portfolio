@@ -4,21 +4,30 @@
       <h1>Projects</h1>
     </div>
     <div class="projects flex">
-      <div class="card flex flex-column">
-        <h2 class="name flex">Name of Website</h2>
+      <div data-aos="fade-up" class="card flex flex-column">
+        <div class="name flex">
+          <h2 class="">Name of Website</h2>
+          <g-link to="https://ahmedshaswar.com">
+            <g-image
+              width="30"
+              src="~/assets/images/open_website.svg"
+              fit="contain"
+            />
+          </g-link>
+        </div>
         <p class="desc flex">
           description of the app that might be a few lines long and it will talk
           about the app itself sdokhfodns fsdh fsjdhf sjhf
         </p>
         <p class="tech flex">Technologies used for the app</p>
       </div>
-      <div class="card flex">Hello This is a card</div>
-      <div class="card flex">Hello This is a card</div>
-      <div class="card flex">Hello This is a card</div>
-      <div class="card flex">Hello This is a card</div>
-      <div class="card flex">Hello This is a card</div>
-      <div class="card flex">Hello This is a card</div>
-      <div class="card flex">Hello This is a card</div>
+      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
+      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
+      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
+      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
+      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
+      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
+      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
     </div>
   </div>
 </template>
