@@ -53,7 +53,9 @@
             @submit.prevent="submitForm"
             id="contact-form"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
+            <input type="hidden" name="contact" value="ask-question" />
             <div class="flex flex-column name">
               <label for="name">Your Name</label>
               <input id="name" type="text" name="name" />
