@@ -21,13 +21,6 @@
         </p>
         <p class="tech flex">Technologies used for the app</p>
       </div>
-      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
-      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
-      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
-      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
-      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
-      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
-      <div data-aos="fade-up" class="card flex">Hello This is a card</div>
     </div>
   </div>
 </template>
@@ -35,5 +28,16 @@
 <script>
 export default {
   name: "works",
+  data() {
+    return {
+      projects: [
+        {
+          name: "Babylon Holiday",
+          description: "This is a description for the website",
+          links: [{}],
+        },
+      ],
+    };
+  },
 };
 </script>

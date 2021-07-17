@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="hero flex">
+    <div id="/" class="hero flex">
       <div class="hero-image"></div>
       <div class="container">
         <div class="hero-text">
