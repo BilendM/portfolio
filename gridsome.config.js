@@ -6,5 +6,21 @@
 
 module.exports = {
   siteName: 'Bilend',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/content/posts/**/*.md',
+        typeName: 'post',
+        remark: {
+          //Config options can be added here
+        }
+      }
+    }
+  ],
+  transformers: {
+    remark: {
+      //Config options can be added here
+    }
+  }
 }
