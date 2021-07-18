@@ -10,8 +10,18 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/content/posts/**/*.md',
-        typeName: 'post',
+        path: 'src/content/works/**/*.md',
+        typeName: 'works',
+        remark: {
+          //Config options can be added here
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/content/projects/**/*.md',
+        typeName: 'projects',
         remark: {
           //Config options can be added here
         }

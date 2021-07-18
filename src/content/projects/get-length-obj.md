@@ -1,8 +1,8 @@
 ---
-path: "/blog/get-length-obj"
-date: "2019-05-04"
 title: "How to Get the Length of An Object"
-image: "../../assets/images/vue.svg"
+images:
+- image: "../../assets/images/gridsome.svg"
+- image: "../../assets/images/github.svg"
 ---
 There are 2 ways to get the length of the list of keys of an object.
 ## Object.keys
