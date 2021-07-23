@@ -41,10 +41,11 @@
 
 <static-query>
 query {
-  allWorks {
+  allWorks (sortBy: "id", order: ASC){
     totalCount
     edges {
       node {
+        weight
         title
         description
         website_image

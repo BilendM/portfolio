@@ -1,6 +1,10 @@
 <template>
   <div>
-    <nav class="nav" :class="{ 'nav-hidden': !showNavbar }">
+    <nav
+      aria-label="Desktop navigation bar"
+      class="nav desktop"
+      :class="{ 'nav-hidden': !showNavbar }"
+    >
       <div class="logo">
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </div>
@@ -18,6 +22,33 @@
           <a class="resume" href="contact">Resume</a>
         </li>
       </ul>
+    </nav>
+    <nav
+      aria-label="Mobile navigation bar"
+      class="nav mobile"
+      :class="{ 'nav-hidden': !showNavbar }"
+    >
+      <div class="logo">
+        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a class="resume" href="contact">Resume</a>
+        </li>
+      </ul>
+      <div class="bottom-nav-links">
+        <ul class="nav-links">
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+          <li>
+            <a href="#works">Works</a>
+          </li>
+          <li>
+            <a href="#contact">Contact Me</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <slot />
   </div>
