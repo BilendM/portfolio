@@ -45,7 +45,7 @@ query {
     totalCount
     edges {
       node {
-        weight
+        id
         title
         description
         website_image
