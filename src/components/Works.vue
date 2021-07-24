@@ -11,7 +11,15 @@
           class="card flex"
         >
           <div class="left flex flex-column">
-            <g-image :src="work.node.website_image" />
+            <div class="content">
+              <a :href="work.node.links[0].link">
+                <div class="content-overlay"></div>
+                <g-image class="content-image" :src="work.node.website_image" />
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">{{ work.node.title }}</h3>
+                </div>
+              </a>
+            </div>
           </div>
           <div class="right flex flex-column">
             <p>{{ work.node.description }}</p>
@@ -21,15 +29,15 @@
                 :key="i"
                 :src="stack.image"
               />
-            </div>
-            <div class="links flex">
-              <g-link
-                v-for="(link, l) in work.node.links"
-                :key="l"
-                :to="link.link"
-              >
-                <g-image :src="link.image" />
-              </g-link>
+              <div class="links flex">
+                <g-link
+                  v-for="(link, l) in work.node.links"
+                  :key="l"
+                  :to="link.link"
+                >
+                  <g-image :src="link.image" />
+                </g-link>
+              </div>
             </div>
           </div>
         </div>

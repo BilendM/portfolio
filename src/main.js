@@ -8,7 +8,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, head, isClient }) {
   head.link.push({
-    rel: 'preload',
+    rel: 'preload stylesheet',
     as: 'style',
     href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap'
   })

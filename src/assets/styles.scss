@@ -219,9 +219,6 @@ body {
 					bottom: 0;
 					position: relative;
 					width: 100%;
-				&:hover {
-						bottom: 4px;
-					}
 				}
 				h2 {
 					color: transparent;
@@ -231,8 +228,69 @@ body {
 					font-weight: 900;
 					letter-spacing: 1.5px;
 				}
+				.content {
+  					position: relative;
+				}
+				.content .content-overlay {
+					border-radius: 20px;
+					background: rgba(0, 0, 0, 0.55);
+					position: absolute;
+					height: 99%;
+					width: 100%;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					opacity: 0;
+					z-index: 1;
+					-webkit-transition: all 0.2s ease-in-out 0s;
+					-moz-transition: all 0.2s ease-in-out 0s;
+					transition: all 0.2s ease-in-out 0s;
+				}
+
+				.content:hover .content-overlay{
+					opacity: 1;
+				}
+
+				.content-details {
+					position: absolute;
+					text-align: center;
+					padding-left: 1em;
+					padding-right: 1em;
+					width: 100%;
+					top: 50%;
+					left: 50%;
+					z-index: 2;
+					opacity: 0;
+					-webkit-transform: translate(-50%, -50%);
+					-moz-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					-webkit-transition: all 0.3s ease-in-out 0s;
+					-moz-transition: all 0.3s ease-in-out 0s;
+					transition: all 0.3s ease-in-out 0s;
+				}
+
+				.content:hover .content-details{
+					top: 50%;
+					left: 50%;
+					opacity: 1!important;
+				}
+
+				.content-details h3{
+					color: $text;
+					font-size: 1.6rem;
+					letter-spacing: 0.05em;
+					text-transform: uppercase;
+				}
+
+				.fadeIn-bottom{
+					top: 80%;
+				}
 			}
 			.right {
+				.stack {
+					align-items: baseline;
+				}
 				flex: 1;
 				justify-content: space-between;
 				span {
@@ -240,18 +298,19 @@ body {
 					font-weight:500;
 					font-size: 1.1em;
 				}
+				img {
+					margin-right: 1em;
+					margin-top: 1em;
+					transition: all 0.1s ease-out;
+				}
 				.links {
+					width: 100%;
 					justify-content: flex-end;
 					img {
 						&:hover {
 						filter: brightness(90%) sepia(100) saturate(60) hue-rotate(280deg);
 						}
 					}
-				}
-				img {
-					margin-right: 1em;
-					margin-top: 1em;
-					transition: all 0.1s ease-out;
 				}
 			}
 		}
@@ -342,7 +401,7 @@ body {
 				font-size: 1rem;
 				padding: 0.8em 1.4em;
 				margin-top: 1rem;
-				color: $text;
+				color: $purple;
 				background-color: $lilac;
 				border: none;
 				border-radius: 10px;
@@ -374,7 +433,6 @@ body {
 				justify-content: space-between;
 				a {
 					margin-right: 2.4em;
-					display: flex;
 					position: relative;
 					z-index: 99;
 					&::before {
