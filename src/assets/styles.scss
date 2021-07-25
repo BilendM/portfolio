@@ -286,10 +286,22 @@ body {
 		}
 	}
 	.projects {
+		position: relative;
+		.lottie {
+				position: absolute;
+				left: -23%;
+				top: 10%;
+				z-index: 0;
+				display: block;
+				@media(max-width: 800px) {
+			display: none;
+		};
+			}
 		margin-top: 20px;
 		flex-wrap: wrap;
 		gap: 20px;
 		.card {
+			z-index: 1;
 			background-color: $background;
 			border-radius: 20px;
 			color: $text;
@@ -337,6 +349,7 @@ body {
 				flex: 1;
 			}
 			.tech {
+				flex-wrap: wrap;
 				justify-content: flex-start;
 				align-items: flex-end;
 				margin: 12px;

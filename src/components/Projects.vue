@@ -4,11 +4,15 @@
       <h1>Projects</h1>
     </div>
     <div class="projects flex">
+      <div class="lottie">
+        <lottie :options="defaultOptions" v-on:animCreated="handleAnimation" />
+      </div>
       <div
         v-for="(project, index) in $static.allProjects.edges"
         :key="index"
         data-aos="fade-up"
         :data-aos-delay="index * 50"
+        data-aos-anchor-placement="center-bottom"
         class="card flex flex-column"
       >
         <div class="name flex">
@@ -60,7 +64,38 @@ query {
 </static-query>
 
 <script>
+import Lottie from "vue-lottie";
+import noodle from "~/assets/animations/noodle.json";
 export default {
   name: "works",
+  components: {
+    lottie: Lottie,
+  },
+  data() {
+    return {
+      defaultOptions: {
+        animationData: noodle,
+        loop: true,
+      },
+      animationSpeed: 1,
+    };
+  },
+  methods: {
+    handleAnimation: function (anim) {
+      this.anim = anim;
+    },
+    play: function () {
+      this.anim.play();
+    },
+    pause: function () {
+      this.anim.pause();
+    },
+    onSpeedChange: function () {
+      this.anim.setSpeed(this.animationSpeed);
+    },
+  },
+  mounted() {
+    this.anim.setSpeed(0.2);
+  },
 };
 </script>
