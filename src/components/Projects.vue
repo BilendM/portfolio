@@ -4,22 +4,34 @@
       <h1>Projects</h1>
     </div>
     <div class="projects flex">
-      <div data-aos="fade-up" class="card flex flex-column">
+      <div
+        v-for="(project, index) in $static.allProjects.edges"
+        :key="index"
+        data-aos="fade-up"
+        :data-aos-delay="index * 50"
+        class="card flex flex-column"
+      >
         <div class="name flex">
-          <h2 class="">Name of Website</h2>
-          <g-link to="https://ahmedshaswar.com">
-            <g-image
-              width="30"
-              src="~/assets/images/open_website.svg"
-              fit="contain"
-            />
-          </g-link>
+          <h2 class="">{{ project.node.title }}</h2>
+          <div v-if="project.node.links.length > 0" class="links flex">
+            <g-link
+              v-for="(link, l) in project.node.links"
+              :key="l"
+              :to="link.link"
+            >
+              <g-image :src="link.image" />
+            </g-link>
+          </div>
         </div>
         <p class="desc flex">
-          description of the app that might be a few lines long and it will talk
-          about the app itself sdokhfodns fsdh fsjdhf sjhf
+          {{ project.node.description }}
         </p>
-        <p class="tech flex">Technologies used for the app</p>
+        <p class="tech flex">
+          <span v-for="(stack, s) in project.node.stack" :key="s"
+            >{{ stack.name }}
+            <div v-if="s < project.node.stack.length - 1" class="dot"></div>
+          </span>
+        </p>
       </div>
     </div>
   </div>

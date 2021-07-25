@@ -105,7 +105,11 @@ export default {
   name: "contact",
   data() {
     return {
-      formData: {},
+      formData: {
+        name: "",
+        email: "",
+        message: "",
+      },
       sendMessage: "Send Message",
     };
   },
@@ -128,8 +132,12 @@ export default {
       })
         .then(() => {
           this.sendMessage = "Message Sent!";
+          this.formData.name = "";
+          this.formData.email = "";
+          this.formData.message = "";
         })
         .catch((error) => {
+          console.log(error);
           this.sendMessage = "Not Sent :(";
         });
     },
