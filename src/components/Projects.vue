@@ -25,19 +25,30 @@
   </div>
 </template>
 
+<static-query>
+query {
+  allProjects (sortBy: "id", order: ASC){
+    totalCount
+    edges {
+      node {
+        id
+        title
+        description
+        stack {
+          name
+        }
+        links {
+          link
+          image (width: 30, fit: contain, quality: 90)
+        }
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
 export default {
   name: "works",
-  data() {
-    return {
-      projects: [
-        {
-          name: "Babylon Holiday",
-          description: "This is a description for the website",
-          links: [{}],
-        },
-      ],
-    };
-  },
 };
 </script>

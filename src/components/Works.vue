@@ -11,15 +11,12 @@
           class="card flex"
         >
           <div class="left flex flex-column">
-            <div class="content">
-              <a :href="work.node.links[0].link">
-                <div class="content-overlay"></div>
-                <g-image class="content-image" :src="work.node.website_image" />
-                <div class="content-details fadeIn-bottom">
-                  <h3 class="content-title">{{ work.node.title }}</h3>
-                </div>
-              </a>
-            </div>
+            <a :href="work.node.links[0].link" class="image">
+              <g-image class="image__img" :src="work.node.website_image" />
+              <div class="image__overlay image__overlay--primary">
+                <h3 class="image__title">{{ work.node.title }}</h3>
+              </div>
+            </a>
           </div>
           <div class="right flex flex-column">
             <p>{{ work.node.description }}</p>
@@ -74,11 +71,6 @@ query {
 import Projects from "./Projects.vue";
 export default {
   name: "works",
-  data() {
-    return {
-      works: {},
-    };
-  },
   components: {
     Projects,
   },

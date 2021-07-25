@@ -21,11 +21,6 @@ $color-background: hsl(323, 21%, 16%);
 h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }
-/* img {
-	display: block;
-	width: 100%;
-	height: auto;
-} */
 html {
 	scroll-behavior: smooth;
 }
@@ -39,7 +34,6 @@ body {
 .flex-column {
 	flex-direction: column;
 }
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -94,17 +88,14 @@ body {
   box-shadow: none;
   transform: translate3d(0, -100%, 0);
 }
-
 .nav-links {
 	display: flex;
 	justify-content: space-around;
 }
-
 .nav-links li {
 	list-style: none;
 	margin-left: 2.4rem;
 }
-
 .nav-links a {
 	color: $text-dark;
 	text-decoration: none;
@@ -115,7 +106,6 @@ body {
 		color: $text;
 	}
 }
-
 .resume {
     color: $lilac;
     border: $lilac 0.125em solid;
@@ -124,13 +114,11 @@ body {
     position: relative;
 	margin-left: 10px;
 }
-
 .container {
     width: 85%;
     max-width: 65em;
     margin: 0 auto;
 }
-
 .hero {
 	width: 100%;
 	height: 91vh;
@@ -138,7 +126,6 @@ body {
 	background-color: $purple;
 	align-items: center;
 }
-
 .hero-image {
 	background-image: url('../assets/images/science.png');
 	position: absolute;
@@ -151,7 +138,6 @@ body {
 	opacity: 0.25;
 	background-position: center center;
 }
-
 .hero-text {
 	position: relative;
 	color: $text;
@@ -160,7 +146,6 @@ body {
 		font-weight: 300;
 	}
 }
-
 .section {
 	p {
 		color: $text;
@@ -228,68 +213,52 @@ body {
 					font-weight: 900;
 					letter-spacing: 1.5px;
 				}
-				.content {
-  					position: relative;
+				.image {
+					position: relative;
 				}
-				.content .content-overlay {
-					border-radius: 20px;
-					background: rgba(0, 0, 0, 0.55);
+				.image__img {
+					display: block;
+				}
+				.image__overlay {
 					position: absolute;
-					height: 99%;
-					width: 100%;
-					left: 0;
 					top: 0;
-					bottom: 0;
-					right: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: rgba(0, 0, 0, 0.6);
+					color: #ffffff;
+					display: flex;
+					border-radius: 20px;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
 					opacity: 0;
-					z-index: 1;
-					-webkit-transition: all 0.2s ease-in-out 0s;
-					-moz-transition: all 0.2s ease-in-out 0s;
-					transition: all 0.2s ease-in-out 0s;
+					transition: opacity 0.25s;
 				}
-
-				.content:hover .content-overlay{
+				.image__overlay--blur {
+					backdrop-filter: blur(5px);
+				}
+				.image__overlay--primary {
+					background: rgba(0, 0, 0, 0.5);
+				}
+				.image__overlay > * {
+					transform: translateY(20px);
+					transition: transform 0.25s;
+				}
+				.image__overlay:hover {
 					opacity: 1;
 				}
-
-				.content-details {
-					position: absolute;
-					text-align: center;
-					padding-left: 1em;
-					padding-right: 1em;
-					width: 100%;
-					top: 50%;
-					left: 50%;
-					z-index: 2;
-					opacity: 0;
-					-webkit-transform: translate(-50%, -50%);
-					-moz-transform: translate(-50%, -50%);
-					transform: translate(-50%, -50%);
-					-webkit-transition: all 0.3s ease-in-out 0s;
-					-moz-transition: all 0.3s ease-in-out 0s;
-					transition: all 0.3s ease-in-out 0s;
+				.image__overlay:hover > * {
+					transform: translateY(0);
 				}
-
-				.content:hover .content-details{
-					top: 50%;
-					left: 50%;
-					opacity: 1!important;
-				}
-
-				.content-details h3{
-					color: $text;
-					font-size: 1.6rem;
-					letter-spacing: 0.05em;
-					text-transform: uppercase;
-				}
-
-				.fadeIn-bottom{
-					top: 80%;
+				.image__title {
+					font-size: 2em;
+					font-weight: bold;
 				}
 			}
 			.right {
 				.stack {
-					align-items: baseline;
+					align-items: flex-end;
 				}
 				flex: 1;
 				justify-content: space-between;
@@ -307,6 +276,7 @@ body {
 					width: 100%;
 					justify-content: flex-end;
 					img {
+						display: block;
 						&:hover {
 						filter: brightness(90%) sepia(100) saturate(60) hue-rotate(280deg);
 						}
@@ -358,8 +328,8 @@ body {
 	}
 	.contact {
 		@media(max-width: 800px) {
-				flex-direction: column;
-			}
+			flex-direction: column;
+		}
 		.left {
 			flex-basis: 50%;
 			align-items: flex-start;
@@ -413,7 +383,6 @@ body {
 				&:hover {
 					background-color: $text-active;
 				}
-
 			}
 			.message-received {
 				margin-top: 20px;
@@ -458,11 +427,9 @@ body {
 			}
 	}
 }
-
 .contact-form {
 	.submit  {
 		justify-content: flex-end;
 		align-items: flex-end;
 	}
-
 }
