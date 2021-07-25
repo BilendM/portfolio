@@ -1,6 +1,6 @@
 ---
 id: 5
-title: "Lantana"
+title: "Babylon Booking"
 description: "A website I made for a Gardening and landscaping company."
 stack:
 - name: "Wordpress"
