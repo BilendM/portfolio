@@ -1,5 +1,5 @@
 <template>
-  <section class="section contact">
+  <section class="section no-padding-top contact">
     <div class="container">
       <div class="flex">
         <h1>Get in Touch</h1>

@@ -45,7 +45,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 100;
   transform: translate3d(0, 0, 0);
   transition: 0.1s all ease-out;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.67);
@@ -169,6 +169,12 @@ body {
 	}
 	padding: 5em 0;
 	background-color: $light-purple;
+	&.no-padding-bottom {
+		padding-bottom: 0;
+	}
+	&.no-padding-top {
+		padding-top: 0;
+	}
 	&.about-me {
 		.left{
 			flex-basis: 30%;
@@ -176,7 +182,7 @@ body {
 		.right {
 			margin-top: 1em;
 			flex-basis: 70%;
-			max-width: 65ch;
+			max-width: 75ch;
 		} 
 	}
 	.freelancing-works {
@@ -259,6 +265,11 @@ body {
 			.right {
 				.stack {
 					align-items: flex-end;
+					img.stack-image {
+					margin-right: 1em;
+					margin-top: 1em;
+					transition: all 0.1s ease-out;
+				}
 				}
 				flex: 1;
 				justify-content: space-between;
@@ -267,39 +278,58 @@ body {
 					font-weight:500;
 					font-size: 1.1em;
 				}
-				img {
-					margin-right: 1em;
-					margin-top: 1em;
-					transition: all 0.1s ease-out;
-				}
 				.links {
 					width: 100%;
 					justify-content: flex-end;
-					img {
-						display: block;
-						&:hover {
-						filter: brightness(90%) sepia(100) saturate(60) hue-rotate(280deg);
+					a {
+					position: relative;
+					z-index: 99;
+					&::before {
+						margin-right: 0;
+						margin-top: 0;
+						content: '';
+						position: absolute;
+						background-color: $lilac;
+						top: -30%;
+						left: -30%;
+						transform: translate(-50%, -50%);
+						width: 40px;
+						border-radius: 50%;
+						height: 40px;
+						z-index: -1;
+						transform: scale(0);
+						transition: all 0.1s ease-out;
+					}
+					&:hover {
+						&::before {
+							transform: scale(1);
 						}
 					}
+				}
 				}
 			}
 		}
 	}
 	.projects {
 		position: relative;
+		padding: 3em 0;
+		flex-wrap: wrap;
 		.lottie {
 				position: absolute;
-				left: -23%;
+				left: -20%;
 				top: 10%;
 				z-index: 0;
 				display: block;
 				width: 300px;
 				@media(max-width: 800px) {
-			display: none;
-		};
+					display: none;
+				};
+				&.right {
+					top: 55%;
+					right: -18%!important;
+					left: auto;
+				}
 			}
-		margin-top: 20px;
-		flex-wrap: wrap;
 		gap: 20px;
 		.card {
 			z-index: 1;

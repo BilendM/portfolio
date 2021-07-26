@@ -10,7 +10,7 @@
       </div>
     </div>
     <Aboutme id="about" />
-    <Works id="works" />
+    <Works style="overflow: hidden" id="works" />
     <Contact id="contact" />
   </Layout>
 </template>

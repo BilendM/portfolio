@@ -22,6 +22,7 @@
             <p>{{ work.node.description }}</p>
             <div class="stack flex">
               <g-image
+                class="stack-image"
                 v-for="(stack, i) in work.node.stack"
                 :key="i"
                 :src="stack.image"

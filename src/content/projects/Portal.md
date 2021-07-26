@@ -5,7 +5,4 @@ description: "An internal tool used by Moonline's departments that connected dir
 stack:
 - name: "VueJs"
 - name: "Element UI"
-links:
-- link: "https://bilendm.alwaysdata.net"
-  image: "../../assets/images/open_website.svg"
 ---

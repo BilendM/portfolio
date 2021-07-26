@@ -7,8 +7,6 @@ stack:
 - name: "Markdown"
 - name: "GraphQL"
 links:
-- link: "https://github.com"
+- link: "https://github.com/BilendM/portfolio"
   image: "../../assets/images/github_outline.svg"
-- link: "https://ahmedshaswar.com"
-  image: "../../assets/images/open_website.svg"
 ---

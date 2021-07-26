@@ -1,19 +1,22 @@
 <template>
-  <div>
+  <div class="section no-padding-bottom">
     <div class="flex">
       <h1>Projects</h1>
     </div>
-    <div class="projects flex">
+    <div class="projects flex anim">
       <div class="lottie">
-        <lottie :options="defaultOptions" v-on:animCreated="handleAnimation" />
+        <Lottie
+          :options="defaultOptions.noodle"
+          v-on:animCreated="handleAnimation"
+        />
       </div>
       <div
         v-for="(project, index) in $static.allProjects.edges"
         :key="index"
         data-aos="fade-up"
         :data-aos-delay="index * 50"
-        data-aos-anchor-placement="center-bottom"
         class="card flex flex-column"
+        data-aos-anchor=".anim"
       >
         <div class="name flex">
           <h2 class="">{{ project.node.title }}</h2>
@@ -36,6 +39,12 @@
             <div v-if="s < project.node.stack.length - 1" class="dot"></div>
           </span>
         </p>
+      </div>
+      <div class="lottie right">
+        <Lottie
+          :options="defaultOptions.blob"
+          v-on:animCreated="handleAnimation"
+        />
       </div>
     </div>
   </div>
@@ -65,24 +74,35 @@ query {
 
 <script>
 import Lottie from "vue-lottie";
-import noodle from "~/assets/animations/noodle.json";
+import * as noodle from "~/assets/animations/noodle.json";
+import * as blob from "~/assets/animations/something.json";
 export default {
   name: "works",
   components: {
-    lottie: Lottie,
+    Lottie,
   },
   data() {
     return {
       defaultOptions: {
-        animationData: noodle,
-        loop: true,
+        noodle: {
+          animationData: noodle.default,
+          loop: true,
+        },
+        blob: {
+          animationData: blob.default,
+          loop: true,
+        },
       },
-      animationSpeed: 1,
+      animationSpeed: 0.2,
     };
   },
   methods: {
     handleAnimation: function (anim) {
       this.anim = anim;
+      this.anim.setSpeed(this.animationSpeed);
+    },
+    stop: function () {
+      this.anim.stop();
     },
     play: function () {
       this.anim.play();
@@ -90,12 +110,6 @@ export default {
     pause: function () {
       this.anim.pause();
     },
-    onSpeedChange: function () {
-      this.anim.setSpeed(this.animationSpeed);
-    },
-  },
-  mounted() {
-    this.anim.setSpeed(0.2);
   },
 };
 </script>
