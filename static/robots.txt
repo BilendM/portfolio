@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://bilendm.com/sitemap.xml
+Host: https://bilendm.com
