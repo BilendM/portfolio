@@ -30,9 +30,7 @@
                 v-for="(stack, i) in work.node.stack"
                 :key="i"
                 :src="stack.image"
-                :alt="
-                  stack.image.src.split('/images/')[1].split('.')[0] + ' Logo'
-                "
+                alt="Stack Logo"
               />
               <div class="links flex">
                 <g-link
