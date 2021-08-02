@@ -29,11 +29,36 @@ export default function (Vue, { router, head, isClient }) {
       content: config.siteDescription
     },
 
-    { name: 'copyright', content: 'Bilend Mohammed. All rights reserved.' },
-    { key: "og:type", property: "og:type", content: 'article' },
+    { name: 'copyright', content: config.siteName + ' All rights reserved.' },
+    { key: "og:type", property: "og:type", content: 'website' },
     { key: "og:description", property: "og:description", content: config.siteDescription },
-    { key: "og:image", property: "og:image", content: 'https://bilendm.com/assets/images/science.png' },
-    { property: "og:site_name", content: config.siteName }
+    { key: "og:image", property: "og:image", content: 'https://bilendm.com/assets/images/og.png' },
+    { property: "og:site_name", content: config.siteName },
+    {
+      key: 'twitter:description',
+      name: 'twitter:description',
+      content: config.siteDescription
+    },
+    {
+      key: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      key: 'twitter:image',
+      property: 'twitter:image',
+      content: 'https://bilendm.com/assets/images/og.png'
+    },
+    {
+      key: 'twitter:title',
+      property: 'twitter:title',
+      content: config.siteName
+    },
+    {
+      key: 'twitter:image',
+      property: 'twitter:image',
+      content: 'https://bilendm.com/assets/images/og.png'
+    }
   )
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)

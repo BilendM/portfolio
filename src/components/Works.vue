@@ -12,7 +12,11 @@
         >
           <div class="left flex flex-column">
             <a target="_blank" :href="work.node.links[0].link" class="image">
-              <g-image class="image__img" :src="work.node.website_image" />
+              <g-image
+                class="image__img"
+                :src="work.node.website_image"
+                :alt="'Screenshot of ' + work.node.title + ' website'"
+              />
               <div class="image__overlay image__overlay--primary">
                 <h3 class="image__title">{{ work.node.title }}</h3>
               </div>
@@ -26,6 +30,9 @@
                 v-for="(stack, i) in work.node.stack"
                 :key="i"
                 :src="stack.image"
+                :alt="
+                  stack.image.src.split('/images/')[1].split('.')[0] + ' Logo'
+                "
               />
               <div class="links flex">
                 <g-link
@@ -33,7 +40,7 @@
                   :key="l"
                   :to="link.link"
                 >
-                  <g-image :src="link.image" />
+                  <g-image :src="link.image" :alt="'Open ' + link.link" />
                 </g-link>
               </div>
             </div>

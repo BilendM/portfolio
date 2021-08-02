@@ -8,14 +8,10 @@ module.exports = {
   siteName: 'Bilend Mohammed',
   siteUrl: 'https://bilendm.com',
   titleTemplate: "Bilend Mohammed",
-  author: "Bilendm",
+  author: "Bilend Mohammed",
   siteDescription: 'Bilend Mohammed is a full-stack web developer specializing in front-end technologies based in Sulaymaniyah, Iraq',
-  metadata: {
-    twitter: {
-      site: '@bilendm',
-      creator: '@bilendm'
-    }
-  },
+  creator: '@bilendm'
+  ,
   plugins: [
     {
       use: '@gridsome/source-filesystem',

@@ -12,6 +12,7 @@
                 width="16"
                 src="~/assets/images/email.svg"
                 fit="contain"
+                alt="Email Icon"
               />
               bilendmohammed@gmail.com
             </h3>
@@ -20,6 +21,7 @@
                 width="16"
                 src="~/assets/images/phone.svg"
                 fit="contain"
+                alt="Phone Icon"
               />+964 773 555 9696
             </h3>
             <h3>
@@ -27,6 +29,7 @@
                 width="16"
                 src="~/assets/images/marker.svg"
                 fit="contain"
+                alt="Location Marker Icon"
               />Sulaymaniyah, Iraq
             </h3>
           </div>
@@ -36,6 +39,7 @@
                 width="30"
                 src="~/assets/images/linkedin.svg"
                 fit="contain"
+                alt="Linkedin Logo"
               />
             </g-link>
             <g-link to="https://github.com/BilendM">
@@ -43,6 +47,7 @@
                 width="30"
                 src="~/assets/images/github_outline.svg"
                 fit="contain"
+                alt="Github Logo"
               />
             </g-link>
           </div>

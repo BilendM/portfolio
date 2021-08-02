@@ -26,7 +26,7 @@
               :key="l"
               :to="link.link"
             >
-              <g-image :src="link.image" />
+              <g-image :src="link.image" :alt="'Open ' + link.link" />
             </g-link>
           </div>
         </div>
