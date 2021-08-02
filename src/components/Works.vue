@@ -11,7 +11,12 @@
           class="card flex"
         >
           <div class="left flex flex-column">
-            <a target="_blank" :href="work.node.links[0].link" class="image">
+            <a
+              target="_blank"
+              rel="noopener"
+              :href="work.node.links[0].link"
+              class="image"
+            >
               <g-image
                 class="image__img"
                 :src="work.node.website_image"

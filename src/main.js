@@ -55,9 +55,9 @@ export default function (Vue, { router, head, isClient }) {
       content: config.siteName
     },
     {
-      key: 'twitter:image',
-      property: 'twitter:image',
-      content: 'https://bilendm.com/assets/images/og.png'
+      key: 'twitter:creator',
+      property: 'twitter:creator',
+      content: config.creator
     }
   )
   // Set default layout as a global component

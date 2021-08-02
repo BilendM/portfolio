@@ -36,6 +36,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
+        include: ['#about', 'works', '#contact'],
         config: {
           '#about': {
             lastmod: '2021-08-02',
