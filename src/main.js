@@ -32,7 +32,7 @@ export default function (Vue, { router, head, isClient }) {
     { name: 'copyright', content: config.siteName + ' All rights reserved.' },
     { key: "og:type", property: "og:type", content: 'website' },
     { key: "og:description", property: "og:description", content: config.siteDescription },
-    { key: "og:image", property: "og:image", content: 'https://bilendm.com/assets/images/og.png' },
+    { key: "og:image", property: "og:image", content: 'https://bilendm.com/og.png' },
     { property: "og:site_name", content: config.siteName },
     {
       key: 'twitter:description',
@@ -47,12 +47,17 @@ export default function (Vue, { router, head, isClient }) {
     {
       key: 'twitter:image',
       property: 'twitter:image',
-      content: 'https://bilendm.com/assets/images/og.png'
+      content: 'https://bilendm.com/og.png'
     },
     {
       key: 'twitter:title',
       property: 'twitter:title',
       content: config.siteName
+    },
+    {
+      key: 'twitter:site',
+      property: 'twitter:site',
+      content: config.creator
     },
     {
       key: 'twitter:creator',
