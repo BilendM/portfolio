@@ -36,7 +36,13 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        // include: ['https://bilendm.com', 'https://bilendm.com/#about', 'https://bilendm.com/#works', 'https://bilendm.com/#contact'],
+        // include: ['https://bilendm.com/#about', 'https://bilendm.com/#works', 'https://bilendm.com/#contact'],
+        staticUrls: [
+          {
+            url: '/#about',
+
+          }
+        ]
         // config: {
         //   '#about': {
         //     lastmod: '2021-08-02',
