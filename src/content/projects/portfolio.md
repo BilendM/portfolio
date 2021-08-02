@@ -1,11 +1,11 @@
 ---
 id: 1
-title: "This Portfolio"
-description: "This portfolio you're looking at right now"
+title: "My Portfolio"
+description: "My current portfolio built using Gridsome, Markdown, and GraphQL. Open source and hosted on Netlify!"
 stack:
 - name: "Gridsome"
-- name: "Markdown"
 - name: "GraphQL"
+- name: "SCSS"
 links:
 - link: "https://github.com/BilendM/portfolio"
   image: "../../assets/images/github_outline.svg"

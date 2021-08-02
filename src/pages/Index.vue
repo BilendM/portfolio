@@ -6,6 +6,7 @@
         <div class="hero-text">
           <p>Hello, I'm</p>
           <h1 data-aos="fade-down">Bilend Mohammed</h1>
+          <p class="small">And I'm a Front-end Web Developer</p>
         </div>
       </div>
     </div>

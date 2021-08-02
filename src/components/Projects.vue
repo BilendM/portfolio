@@ -1,7 +1,7 @@
 <template>
   <div class="section no-padding-bottom">
     <div class="flex">
-      <h1>Projects</h1>
+      <h1>More Projects</h1>
     </div>
     <div class="projects flex anim">
       <div class="lottie">

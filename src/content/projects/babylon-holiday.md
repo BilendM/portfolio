@@ -1,7 +1,7 @@
 ---
 id: 4
 title: "Babylon Holiday"
-description: "One of my first websites for Moonline. I created this website as a landing page for Babylon Holiday, a hotel booking service Moonline provides."
+description: "Built a website serving as a homepage for Babylon Holiday, a B2B hotel booking platform owned by Moonline."
 stack:
 - name: "Wordpress"
 - name: "Google Maps"

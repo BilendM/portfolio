@@ -1,7 +1,7 @@
 ---
 id: 6
 title: "Lantana"
-description: "A website I made for a Gardening and landscaping company."
+description: "Designed and built a multilingual website for a Gardening and landscaping company based in Sulaymaniyah."
 stack:
 - name: "Wordpress"
 links:

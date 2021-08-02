@@ -2,7 +2,7 @@
   <section class="section works">
     <div class="container">
       <div class="flex">
-        <h1>Works</h1>
+        <h1>Projects</h1>
       </div>
       <div class="freelancing-works flex flex-column">
         <div
@@ -11,7 +11,7 @@
           class="card flex"
         >
           <div class="left flex flex-column">
-            <a :href="work.node.links[0].link" class="image">
+            <a target="_blank" :href="work.node.links[0].link" class="image">
               <g-image class="image__img" :src="work.node.website_image" />
               <div class="image__overlay image__overlay--primary">
                 <h3 class="image__title">{{ work.node.title }}</h3>

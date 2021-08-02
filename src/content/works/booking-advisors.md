@@ -1,7 +1,8 @@
 ---
 id: 1
 title: "Booking Advisors"
-description: "Worked on Booking Advisors. A Moonline Travel and Trade product. An online flight and hotel booking platform. Utilized Quasar Framework, payment gateways, and external APIs to create a fully functioning platform where users can search for flights and hotels and book them."
+description: "Booking Advisors is an online flight and hotel booking system powered by Moonline Travel and Trade Ltd.
+I have worked on this project with my team utilizing Quasar Framework, payment gateways, and external APIs to build a fully functioning OTA where users can book their desired hotels and flights."
 website_image: "../../assets/images/booking_advisors.png"
 stack:
 - image: "../../assets/images/vue.svg"

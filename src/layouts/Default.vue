@@ -51,6 +51,7 @@
       </div>
     </nav>
     <slot />
+    <footer>Built by Bilend Mohammed</footer>
   </div>
 </template>
 

@@ -1,11 +1,11 @@
 ---
 id: 5
 title: "Babylon Booking"
-description: "A website I made for a Gardening and landscaping company."
+description: "Built a homepage for Babylon Booking, a B2B flight booking platform owned by Moonline."
 stack:
 - name: "PHP"
 - name: "Bootstrap"
-- name: "Mandrill"
+- name: "Wordpress API"
 - name: "GSAP"
 links:
 - link: "https://babylon-booking.com"

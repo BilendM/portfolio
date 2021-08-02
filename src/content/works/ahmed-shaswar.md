@@ -1,7 +1,7 @@
 ---
 id: 2
 title: "Ahmed Shaswar"
-description: "Created a website for Ahmed Shaswar company. This was my first go at creating a JAMstack website. I used Gridsome and Vuetify for the front-end and Prismic for the backend."
+description: "Designed and built a multilingual JAMstack website for a local company called Ahmed Shaswar showcasing their products and services. I used Gridsome and Vuetify for the front-end and Prismic for the backend. The website is hosted on Netlify"
 website_image: "../../assets/images/ahmed_shaswar.png"
 stack:
 - image: "../../assets/images/gridsome.svg"
