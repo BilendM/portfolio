@@ -6,7 +6,7 @@
       :class="{ 'nav-hidden': !showNavbar }"
     >
       <div class="logo">
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+        <g-link to="/">Bilend</g-link>
       </div>
       <ul class="nav-links">
         <li>
@@ -29,7 +29,7 @@
       :class="{ 'nav-hidden': !showNavbar }"
     >
       <div class="logo">
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+        <g-link to="/">Bilend</g-link>
       </div>
       <ul class="nav-links">
         <li>
@@ -54,14 +54,6 @@
     <footer>Built by Bilend Mohammed</footer>
   </div>
 </template>
-
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
 
 <script>
 export default {

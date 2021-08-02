@@ -5,7 +5,16 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Bilend',
+  siteName: 'Bilend Mohammed',
+  titleTemplate: "Bilend Mohammed",
+  siteDescription: 'Bilend Mohammed is a full-stack web developer specializing in front-end technologies based in Sulaymaniyah, Iraq',
+  siteUrl: process.env.DEPLOY_URL || 'https://bilendm.com',
+  metadata: {
+    twitter: {
+      site: '@bilendm',
+      creator: '@bilendm'
+    }
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',

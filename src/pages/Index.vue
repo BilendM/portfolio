@@ -21,9 +21,6 @@ import Aboutme from "~/components/Aboutme.vue";
 import Works from "~/components/Works.vue";
 import Contact from "~/components/Contact.vue";
 export default {
-  metaInfo: {
-    title: "Home",
-  },
   components: {
     Aboutme,
     Works,
