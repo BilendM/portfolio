@@ -39,7 +39,7 @@ module.exports = {
         // include: ['https://bilendm.com/#about', 'https://bilendm.com/#works', 'https://bilendm.com/#contact'],
         staticUrls: [
           {
-            url: '/#about',
+            url: '#about',
 
           }
         ]
