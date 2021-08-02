@@ -8,6 +8,7 @@ module.exports = {
   siteName: 'Bilend Mohammed',
   siteUrl: 'https://bilendm.com',
   titleTemplate: "Bilend Mohammed",
+  author: "Bilendm",
   siteDescription: 'Bilend Mohammed is a full-stack web developer specializing in front-end technologies based in Sulaymaniyah, Iraq',
   metadata: {
     twitter: {
@@ -27,28 +28,31 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/plugin-sitemap',
-      options: {
-        config: {
-          '#about': {
-            lastmod: '2021-08-02',
-          },
-          '#works': {
-            lastmod: '2021-08-02',
-          },
-          '#contact': {
-            lastmod: '2021-08-02',
-          }
-        }
-      }
-    },
-    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'src/content/projects/**/*.md',
         typeName: 'projects',
         remark: {
           //Config options can be added here
+        }
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        config: {
+          '#about': {
+            lastmod: '2021-08-02',
+            priority: 1
+          },
+          '#works': {
+            lastmod: '2021-08-02',
+            priority: 0.9
+          },
+          '#contact': {
+            lastmod: '2021-08-02',
+            priority: 0.8
+          }
         }
       }
     },
