@@ -36,21 +36,21 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        include: ['#about', 'works', '#contact'],
-        config: {
-          '#about': {
-            lastmod: '2021-08-02',
-            priority: 1
-          },
-          '#works': {
-            lastmod: '2021-08-02',
-            priority: 0.9
-          },
-          '#contact': {
-            lastmod: '2021-08-02',
-            priority: 0.8
-          }
-        }
+        include: ['/#about', '/#works', '/#contact'],
+        // config: {
+        //   '#about': {
+        //     lastmod: '2021-08-02',
+        //     priority: 1
+        //   },
+        //   '#works': {
+        //     lastmod: '2021-08-02',
+        //     priority: 0.9
+        //   },
+        //   '#contact': {
+        //     lastmod: '2021-08-02',
+        //     priority: 0.8
+        //   }
+        // }
       }
     },
     {
