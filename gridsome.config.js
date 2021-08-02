@@ -36,13 +36,15 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        // include: ['https://bilendm.com/#about', 'https://bilendm.com/#works', 'https://bilendm.com/#contact'],
         staticUrls: [
           {
-            url: '/#about/',
+            url: '#about/',
           },
           {
-            url: '//#works/',
+            url: '#works/',
+          },
+          {
+            url: '#contact/',
           }
         ]
         // config: {
