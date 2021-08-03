@@ -1,7 +1,7 @@
 ---
 id: 1
 title: "My Portfolio"
-description: "My current portfolio built using Gridsome, Markdown, and GraphQL. Open source and hosted on Netlify!"
+description: "My current portfolio built using Gridsome, Markdown, and GraphQL. Free to use and hosted on Netlify!"
 stack:
 - name: "Gridsome"
 - name: "GraphQL"

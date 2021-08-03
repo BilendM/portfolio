@@ -1,9 +1,9 @@
 ---
 id: 7
 title: "Vue Invoice App"
-description: "An Invoice app built using Vue and Firebase"
+description: "Built and invoice app using Vue and Firebase."
 stack:
-- name: "VueJs"
+- name: "Vuejs"
 - name: "Firebase"
 links:
 - link: "https://github.com/BilendM/vue-invoice-app"

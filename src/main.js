@@ -17,9 +17,10 @@ export default function (Vue, { router, head, isClient }) {
     {
       key: 'keywords',
       name: 'keywords',
-      content: 'HTML, CSS, Javascript, JS, Vue, Vuejs, Front-end, Front-end, Back end, Back-end, Iraq, Sulaymaniyah, Web, Developer, Web Developer'
+      content: 'Bilend Mohammed, Web Developer, Front-end Web Developer, Full-stack Web, Developer'
     },
     {
+      key: 'author',
       name: 'author',
       content: config.author
     },

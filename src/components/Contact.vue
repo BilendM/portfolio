@@ -73,6 +73,7 @@
                 id="name"
                 type="text"
                 name="name"
+                placeholder="Faraj Galali"
               />
             </div>
             <div class="flex flex-column email">
@@ -83,6 +84,7 @@
                 id="email"
                 type="email"
                 name="email"
+                placeholder="youremail@domain.com"
               />
             </div>
             <div class="flex flex-column message">
@@ -93,6 +95,7 @@
                 rows="6"
                 id="message"
                 name="message"
+                placeholder="Hi, I would love to work with you!"
               ></textarea>
             </div>
             <div class="flex submit">
