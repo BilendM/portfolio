@@ -1,7 +1,7 @@
 ---
 id: 7
 title: "Vue Invoice App"
-description: "Built and invoice app using Vue and Firebase."
+description: "Built and hosted an invoice app with Authentication using Vue and Firebase."
 stack:
 - name: "Vuejs"
 - name: "Firebase"

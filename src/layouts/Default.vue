@@ -19,7 +19,9 @@
           <a href="#contact">Contact Me</a>
         </li>
         <li>
-          <a class="resume" href="/Bilend_Mohammed_Resume.pdf">Resume</a>
+          <a class="resume" href="/Bilend_Mohammed_Resume.pdf" target="_blank"
+            >Resume</a
+          >
         </li>
       </ul>
     </nav>
@@ -33,7 +35,9 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a class="resume" href="/Bilend_Mohammed_Resume.pdf">Resume</a>
+          <a class="resume" href="/Bilend_Mohammed_Resume.pdf" target="_blank"
+            >Resume</a
+          >
         </li>
       </ul>
       <div class="bottom-nav-links">

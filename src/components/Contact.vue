@@ -95,7 +95,7 @@
                 rows="6"
                 id="message"
                 name="message"
-                placeholder="Hi, I would love to work with you!"
+                placeholder="Hi, let's work together!"
               ></textarea>
             </div>
             <div class="flex submit">
