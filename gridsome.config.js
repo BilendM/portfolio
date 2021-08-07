@@ -57,6 +57,14 @@ module.exports = {
         },
       },
     },
+    {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM- WDGPV4T',
+        enabled: true,
+        debug: true
+      }
+    }
   ],
   transformers: {
     remark: {
