@@ -1,7 +1,7 @@
 <template>
   <div class="section no-padding-bottom">
     <div class="flex">
-      <h1>More Projects</h1>
+      <h2>More Projects</h2>
     </div>
     <div class="projects flex anim">
       <div class="lottie">
@@ -19,7 +19,7 @@
         data-aos-anchor=".anim"
       >
         <div class="name flex">
-          <h2 class="">{{ project.node.title }}</h2>
+          <h3 class="">{{ project.node.title }}</h3>
           <div v-if="project.node.links.length > 0" class="links flex">
             <g-link
               v-for="(link, l) in project.node.links"

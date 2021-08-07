@@ -2,7 +2,7 @@
   <section class="section no-padding-top contact">
     <div class="container">
       <div class="flex">
-        <h1>Get in Touch</h1>
+        <h2>Get in Touch</h2>
       </div>
       <div class="contact flex">
         <div class="left flex flex-column">

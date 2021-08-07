@@ -2,7 +2,7 @@
   <section class="section works">
     <div class="container">
       <div class="flex">
-        <h1>Projects</h1>
+        <h2>Projects</h2>
       </div>
       <div class="freelancing-works flex flex-column">
         <div
