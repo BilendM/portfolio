@@ -38,16 +38,13 @@ module.exports = {
       options: {
         staticUrls: [
           {
-            url: '/',
+            url: '#about',
           },
           {
-            url: '#about/',
+            url: '#works',
           },
           {
-            url: '#works/',
-          },
-          {
-            url: '#contact/',
+            url: '#contact',
           }
         ]
       }
