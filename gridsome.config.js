@@ -38,6 +38,9 @@ module.exports = {
       options: {
         staticUrls: [
           {
+            url: '/',
+          },
+          {
             url: '#about/',
           },
           {
