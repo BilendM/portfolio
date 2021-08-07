@@ -60,9 +60,9 @@ module.exports = {
     {
       use: 'gridsome-plugin-gtm',
       options: {
-        id: 'GTM-WDGPV4T',
+        id: process.env.GOOGLE_TAG_MANAGER_ID,
         enabled: true,
-        debug: true
+        debug: false
       }
     }
   ],
