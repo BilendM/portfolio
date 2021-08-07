@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Bilend Mohammed',
-  siteUrl: 'http://bilendm.com/',
+  siteUrl: 'https://bilendm.com/',
   titleTemplate: "Bilend Mohammed",
   author: "Bilend Mohammed",
   siteDescription: 'Bilend Mohammed is a full stack web developer specializing in front end development based in Sulaymaniyah, Iraq',
@@ -38,13 +38,13 @@ module.exports = {
       options: {
         staticUrls: [
           {
-            url: '/#about',
+            url: '#about',
           },
           {
-            url: '/#works',
+            url: '#works',
           },
           {
-            url: '/#contact',
+            url: '#contact',
           }
         ]
       }
