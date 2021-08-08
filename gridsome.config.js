@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Bilend Mohammed',
-  siteUrl: 'https://bilendm.com/',
+  siteUrl: 'http://bilendm.com/',
   titleTemplate: "Bilend Mohammed",
   author: "Bilend Mohammed",
   siteDescription: 'Bilend Mohammed is a full stack web developer specializing in front end development based in Sulaymaniyah, Iraq',
