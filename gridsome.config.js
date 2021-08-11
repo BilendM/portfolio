@@ -45,6 +45,9 @@ module.exports = {
           },
           {
             url: '#contact',
+          },
+          {
+            url: '/Bilend_Mohammed_Resume.pdf',
           }
         ]
       }
