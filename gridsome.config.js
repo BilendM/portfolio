@@ -36,6 +36,17 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
+        staticUrls: [
+          {
+            url: '#about',
+          },
+          {
+            url: '#works',
+          },
+          {
+            url: '#contact',
+          }
+        ]
       }
     },
     {
