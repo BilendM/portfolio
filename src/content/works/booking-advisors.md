@@ -8,6 +8,7 @@ stack:
 - image: "../../assets/images/vue.svg"
 - image: "../../assets/images/quasar_dark.svg"
 links:
-- link: "https://bookingadvisors.com"
+- link: "https://booking-advisors.vercel.app/"
+# - link: "https://bookingadvisors.com"
   image: "../../assets/images/open_website.svg"
 ---
